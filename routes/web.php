@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 Route::get('posts',[MainController::class, 'index']);
 
+Route::get('/read-post/{id}',[MainController::class,'showPost']);
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

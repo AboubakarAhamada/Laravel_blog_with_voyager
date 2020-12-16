@@ -18,4 +18,10 @@ class MainController extends Controller
         return view('index',compact('posts','tags'));
     }
 
+    public function showPost($id){
+        $post = Post::find($id);
+        $tags = Tag::all();
+        return view("show-post", compact('post','tags'));
+    }
+
 }

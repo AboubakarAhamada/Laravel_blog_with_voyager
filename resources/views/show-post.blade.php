@@ -27,7 +27,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Blog entries -->
 <div class="w3-col l8 s12">
   <!-- Blog entry -->
-  @foreach ($posts as $post)
     <div class="w3-card-4 w3-margin w3-white">
     <img src="{{'/storage/'.$post->featured_image}}" alt="Nature" style="width:100%">
     <div class="w3-container">
@@ -40,7 +39,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border"><b> 
-            <a href="{{'/read-post/'.$post->id}}" style="text-decoration: none"> READ MORE </a>&raquo;</b></button></p>
+            <a href="/posts" style="text-decoration: none">&laquo;  Retour sur la liste </a></b></button></p>
         </div>
         <div class="w3-col m4 w3-hide-small">
           <p><span class="w3-padding-large w3-right"><b>Comments &nbsp;</b> <span class="w3-tag">0</span></span></p>
@@ -48,8 +47,6 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
     </div>
   </div>
-  <hr>
-  @endforeach
 <!-- END BLOG ENTRIES -->
 </div>
 
@@ -57,14 +54,14 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-col l4">
   <!-- About Card -->
   <div class="w3-card w3-margin w3-margin-top">
-  <img src="img/photo_cv.jpg" style="width:100%">
+  <img src="/img/photo_cv.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <h4><b>Aboubakar Ahamada</b></h4>
       <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
     </div>
   </div><hr>
   
-  <!-- Posts -->
+  <!-- Posts ------
   <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
       <h4>Popular Posts</h4>
@@ -93,7 +90,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </ul>
   </div>
   <hr> 
- 
+ ---->
   <!-- Labels / tags -->
   <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
@@ -119,8 +116,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Footer -->
 <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next &raquo;</button>
   <p>Powered by <a href="https://www.linkedin.com/in/aboubakarahamada/" target="_blank">Aboubakar Ahamada</a></p>
 </footer>
 
